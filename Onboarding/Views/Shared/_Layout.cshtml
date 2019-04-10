@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+
+    <!--<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />-->
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.1/dist/semantic.min.css" />
+
+</head>
+<body>
+    <div class="ui menu inverted">
+        <div class="container">
+            @Html.ActionLink("React", "Index", "Home", new { area = "" }, new { @class = "item" })
+            @Html.ActionLink("Customers", "Index", "Customer", null, new { @class = "item" })
+            @Html.ActionLink("Products", "Index", "Product", null, new { @class = "item" })
+            @Html.ActionLink("Stores", "Index", "Store", null, new { @class = "item" })
+            @Html.ActionLink("Sales", "Index", "Sales", null, new { @class = "item" })
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <!--<script src="~/Scripts/bootstrap.min.js"></script>-->
+</body>
+</html>
