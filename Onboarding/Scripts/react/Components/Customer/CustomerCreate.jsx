@@ -10,7 +10,6 @@ export default class CustomerCreate extends React.Component {
             CustomerName: '',
             CustomerAddress: '',
 
-
             Sucess: [],
             errors: {}
         }
