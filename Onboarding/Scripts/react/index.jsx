@@ -5,8 +5,11 @@ export default class Example extends React.Component {
 
     render() {
         return (
-            <div>               
-                <p>Hello again</p>                
+            <div>
+                <h1>Welcome</h1>
+                <p>Before 4.8 building application(watching video, search information online and reference other code)</p>
+                <p>4.9 Fixing buttons</p>
+                <p>4.10 Pubilsh on Github</p>
             </div>
         )
     }
