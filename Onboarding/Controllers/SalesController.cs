@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Onboarding.Models;
+using Newtonsoft.Json;
 
 namespace Onboarding.Controllers
 {  
@@ -136,6 +137,10 @@ namespace Onboarding.Controllers
             try
             {
                 Sales sale = db.Sales.Where(s => s.ID == id).SingleOrDefault();
+                string value = JsonConvert.SerializeObject(sale, Formatting.Indented, new JsonSerializerSettings
+                {
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                });
                 return new JsonResult { Data = sale, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
             }
             catch (Exception e)

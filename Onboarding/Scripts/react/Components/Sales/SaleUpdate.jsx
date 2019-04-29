@@ -10,7 +10,10 @@ export default class SaleUpdate extends Component {
 
             CustomerDropdownList: [],
             ProductDropdownList: [],
-            StoresDropdownList: []
+            StoresDropdownList: [],
+            CustomerId: '',
+            ProductId: '',
+            StoreId: ''
         };
 
         this.onClose = this.onClose.bind(this);
